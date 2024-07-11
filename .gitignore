@@ -1,3 +1,4 @@
-
+gulpfile.babel.js
+package.json
 node_modules/
 .gitkeep
