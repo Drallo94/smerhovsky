@@ -1,0 +1,56 @@
+.about{
+  display: grid;
+  align-items: center;
+  gap: 40px;
+
+  @include media('>=desktop'){
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+  }
+
+  &__title.title{
+    position: relative;
+    margin-bottom: 26px;
+    padding-bottom: 26px;
+
+    @include media('>=tablet'){
+      padding-bottom: 36px;
+    }
+
+    &:before{
+      content: "";
+      width: 70px;
+      height: 2px;
+      background: #e1e1e1;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include media('>=desktop'){
+        left: 0;
+        transform: none;
+      }
+    }
+  }
+
+  &__textbox{
+    font-family: var(--font-secondary);
+  }
+
+  &__left{
+    text-align: center;
+
+    @include media('>=desktop'){
+      text-align: left;
+    }
+  }
+
+  &__right{
+    text-align: center;
+
+    @include media('>=desktop'){
+      text-align: right;
+    }
+  }
+}

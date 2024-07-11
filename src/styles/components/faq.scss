@@ -1,0 +1,114 @@
+.faq{
+  position: relative;
+  padding: 30px 0;
+
+  @include media('>=tablet'){
+    padding: 50px;
+  }
+
+  @include media('>=desktop'){
+    padding: 54px 30px 54px 80px;
+  }
+
+  @include media('>=desktop-l'){
+    padding: 72px 0 72px 115px;
+  }
+
+  &:before{
+    content: "";
+    width: 100dvw;
+    height: 2px;
+    background: #ebebeb;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__list{
+    display: grid;
+    gap: 20px;
+
+    @include media('>=tablet'){
+      gap: 30px;
+    }
+
+    @include media('>=desktop'){
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+    }
+  }
+
+  &__title{
+    line-height: 1.1;
+    font-family: var(--font-secondary);
+    color: #2c2c2c;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 30px;
+
+    @include media('>=tablet'){
+      margin-bottom: 50px;
+    }
+
+    @include media('>=desktop'){
+      font-size: 40px;
+    }
+  }
+
+  &__question{
+    color: #2a373e;
+    font-weight: bold;
+    font-family: var(--font-secondary);
+    position: relative;
+    margin-bottom: 12px;
+
+    @include media('>=desktop'){
+      min-height: 50px;
+      margin-bottom: 18px;
+    }
+
+    &:before{
+      @include media('>=tablet'){
+        content: 'Q';
+        left: -22px;
+        position: absolute;
+        color: #f1f1f1;
+        z-index: -1;
+        font-weight: 400;
+        font-family: var(--font-secondary);
+        font-size: 30px;
+        top: -16px;
+      }
+
+      @include media('>=desktop'){
+        top: -30px;
+        font-size: 59px;
+      }
+    }
+  }
+
+  &__answer{
+    color: #546e7a;
+    text-align: justify;
+    position: relative;
+
+    &:before{
+      @include media('>=tablet'){
+        content: 'A';
+        left: -19px;
+        position: absolute;
+        color: #f1f1f1;
+        z-index: -1;
+        font-weight: 400;
+        font-family: var(--font-secondary);
+        font-size: 30px;
+        top: -14px;
+      }
+
+      @include media('>=desktop'){
+        top: -24px;
+        font-size: 59px;
+      }
+    }
+  }
+}

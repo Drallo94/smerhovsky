@@ -1,0 +1,28 @@
+# EditorConfig is awesome:
+# https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# all files
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# https://standardjs.com/rules.html
+[*.js]
+indent_size = 2
+
+[*.scss]
+indent_size = 2
+
+[*.twig]
+indent_style = tab
+indent_size = 4
+
+# selected files
+[{package.json, package-lock.json, yarn.lock}]
+indent_size = 2

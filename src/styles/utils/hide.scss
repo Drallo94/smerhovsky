@@ -1,0 +1,21 @@
+.hide {
+  display: none !important;
+}
+
+@include media("<tablet") {
+  .hide--mobile {
+    display: none !important;
+  }
+}
+
+@include media(">=tablet", "<=desktop") {
+  .hide--tablet {
+    display: none !important;
+  }
+}
+
+@include media(">=desktop") {
+  .hide--desktop {
+    display: none !important;
+  }
+}

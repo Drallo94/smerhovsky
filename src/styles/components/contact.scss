@@ -1,0 +1,63 @@
+.contact{
+  position: relative;
+  padding: 100px 0 0 0;
+
+  @include media('>=tablet'){
+    padding: 130px 0 0 0;
+  }
+
+  @include media('>=desktop'){
+    padding: 192px 0 0 0;
+    min-height: 917px;
+  }
+
+  &__map{
+    width: 100%;
+    height: 400px;
+
+    @include media('>=desktop'){
+      position: absolute;
+      right: 0;
+      top: 120px;
+      max-width: 65dvw;
+      height: calc(100% - 120px);
+    }
+
+    iframe{
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__title.title{
+    margin-bottom: 16px;
+  }
+
+  &__textbox{
+    color: #546e7a;
+    margin-bottom: 32px;
+
+    p{
+      span{
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 10px;
+        color: #37474f;
+      }
+
+      a{
+        transition: color 0.3s;
+        text-decoration: none;
+        color: #37474f;
+
+        @media(pointer: fine){
+          &:active,
+          &:focus,
+          &:hover {
+            color: #29b6f6;
+          }
+        }
+      }
+    }
+  }
+}

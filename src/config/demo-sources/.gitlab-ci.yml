@@ -1,0 +1,30 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: node
+  before_script:
+    - apt-get update
+    - apt-get install -y graphicsmagick
+    - npm install --save-dev gulp-cli
+    - npm install
+  only:
+    - master
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - build
+    expire_in: 1 hour
+
+deploy:
+  stage: deploy
+  before_script:
+    - apt-get update -qq
+    - apt-get install -y -qq lftp
+  script:
+    - lftp -e  "set ssl:verify-certificate false; open 127799.w99.wedos.net; user w127799_projects3 3fV6e7Ra; mkdir -f $CI_JOB_ID; mirror -R build $CI_JOB_ID --verbose; mv websitefolder websitefolder-old; mv $CI_JOB_ID websitefolder; rm -r websitefolder-old; mv websitefolder/_htaccess websitefolder/.htaccess; chmod 777 websitefolder; bye"
+  only:
+    - master

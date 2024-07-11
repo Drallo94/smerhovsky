@@ -1,0 +1,76 @@
+.hero{
+  background: #006699;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0 60px 0;
+
+  @include media('>=tablet'){
+    padding: 180px 0 60px 0;
+  }
+
+  @include media('>=desktop'){
+    min-height: 100dvh;
+    padding: 200px 0 0 0;
+  }
+
+  &__bg{
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    left: 0;
+    opacity: 0.1;
+
+    @include media('>=desktop'){
+      margin-left: -165px;
+      left: 50%;
+      max-width: calc(100dvw - 165px);
+      opacity: 1;
+    }
+
+    @include media('>=desktop-l'){
+      max-width: calc(100dvw - 285px);
+      margin-left: -285px;
+    }
+
+    @include media('<tablet'){
+      object-position: left;
+    }
+  }
+
+  .in{
+    @include media('<desktop'){
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  &__box{
+    text-align: center;
+
+    @include media('>=desktop'){
+      max-width: 290px;
+      text-align: left;
+    }
+  }
+
+  .title{
+    font-family: var(--font-secondary);
+    margin-bottom: 50px;
+    color: #fff;
+
+    @include media('<tablet'){
+      font-size: 28px;
+    }
+  }
+
+  &__textbox{
+    font-family: var(--font-secondary);
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,19 @@
+.title {
+  margin: 0;
+  font-family: var(--font-secondary);
+  color: #2c2c2c;
+
+  &--2{
+    font-weight: 400;
+    font-size: 30px;
+
+    @include media('>=tablet'){
+      font-size: 40px;
+    }
+  }
+
+  &--3{
+    font-size: 22px;
+    font-weight: 400;
+  }
+}

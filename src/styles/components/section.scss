@@ -1,0 +1,8 @@
+.section{
+  border-bottom: 2px solid #e1e1e1;
+  padding: 60px 0;
+
+  @include media('>=desktop'){
+    padding: 100px 0;
+  }
+}

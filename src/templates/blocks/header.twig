@@ -1,0 +1,44 @@
+<header class="header {{ class }}">
+	<div class="in header__in">
+		<div class="header__left">
+			<a href="/" class="header__logo">
+				<img src="images/logo.svg" alt="logo" width="120" height="92">
+			</a>
+			<div class="header__helper">
+				<div class="header-nav">
+					<ul>
+						<li><a href="/">Úvod</a></li>
+						<li class="dropdown">
+							<a href="sluzby.html">Služby</a>
+							<div class="dropdown__btn header-nav__opener"><img src="images/opener.svg" alt="arrow" width="20" height="20"></div>
+							<ul class="dropdown__items">
+								<li><a href="sluzby.html?tab=1">Odklad daňového přiznání</a></li>
+								<li><a href="sluzby.html?tab=2">Vedení účetnictví</a></li>
+								<li><a href="sluzby.html?tab=3">Zastupování před úřady</a></li>
+								<li><a href="sluzby.html?tab=4">Daňové poradenství</a></li>
+							</ul>
+						</li>
+						<li><a href="kontakt.html">Kontakt</a></li>
+					</ul>
+				</div>
+				<a href="https://www.facebook.com/Smerhovsky/" target="_blank" class="header__social hide--tablet hide--desktop">
+					<img src="images/facebook.svg" alt="facebook" width="18" height="18">
+				</a>
+			</div>
+		</div>
+		<div class="header__right">
+			<a href="https://www.facebook.com/Smerhovsky/" target="_blank" class="header__social hide--mobile">
+				<img src="images/facebook.svg" alt="facebook" width="18" height="18">
+			</a>
+			<a href="tel:+420603520813" target="_blank" class="header__phone">
+				<img src="images/phone.svg" alt="phone" width="18" height="18">
+				<span>+420 603 520 813</span>
+			</a>
+			<button class="btn btn--burger js-ToggleBodyClass hide--desktop hide--tablet" data-toggle="nav-is-open">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,15 @@
+{% extends "layout/base.twig" %}
+
+{% block main %}
+
+	{% include "blocks/header.twig" with {
+		class: 'header--subpage'
+	} %}
+
+	{% include "blocks/breadcrumbs.twig" %}
+
+	{% include "blocks/tabs.twig" %}
+
+	{% include "blocks/footer.twig" %}
+
+{% endblock %}
